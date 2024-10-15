@@ -18,34 +18,28 @@ If you make significant changes or if a new year has started since the last upda
 
 ## Publishing to PyPI
 
-The dobyemail package has been successfully published to PyPI. The current version is 0.1.2. To update the package for future releases, follow these steps:
+The dobyemail package has been successfully published to PyPI. To update the package for future releases, we've created a `publish.sh` script that automates the process. Follow these steps:
 
 1. Ensure you have the latest version of the necessary tools:
    ```bash
    pip install --upgrade setuptools wheel twine
    ```
 
-2. Update the version number in `setup.py` to reflect the new version. Always increment the version number when making changes.
-
-3. Clean up any old builds:
+2. Run the publish script:
    ```bash
-   rm -rf build dist *.egg-info
+   ./publish.sh
    ```
 
-4. Build the package:
-   ```bash
-   python setup.py sdist bdist_wheel
-   ```
+   This script will:
+   - Prompt you for a new version number
+   - Update the version in setup.py
+   - Run tests
+   - Clean up old builds
+   - Build the new package
+   - Check the package with twine
+   - Prompt for confirmation before uploading to PyPI
 
-5. Check the package:
-   ```bash
-   twine check dist/*
-   ```
-
-6. Upload to PyPI:
-   ```bash
-   twine upload dist/*
-   ```
+3. Follow the prompts in the script. It will ask for confirmation before uploading to PyPI.
 
 Note: You'll need to have a PyPI account and be added as a collaborator to the project on PyPI to be able to upload the package.
 
