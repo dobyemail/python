@@ -10,16 +10,22 @@ Thank you for your interest in contributing to dobyemail! This document provides
 4. Push your changes to your fork
 5. Submit a pull request to the main repository
 
+## License
+
+This project is licensed under the Apache License 2.0. By contributing to this project, you agree to license your contributions under the same license. Please make sure you understand the terms of the license before contributing.
+
+If you make significant changes or if a new year has started since the last update, please update the copyright year in the LICENSE file.
+
 ## Publishing to PyPI
 
-The dobyemail package has been successfully published to PyPI. To update the package for future releases, follow these steps:
+The dobyemail package has been successfully published to PyPI. The current version is 0.1.2. To update the package for future releases, follow these steps:
 
 1. Ensure you have the latest version of the necessary tools:
    ```bash
    pip install --upgrade setuptools wheel twine
    ```
 
-2. Update the version number in `setup.py` to reflect the new version.
+2. Update the version number in `setup.py` to reflect the new version. Always increment the version number when making changes.
 
 3. Clean up any old builds:
    ```bash
@@ -59,6 +65,6 @@ If you've added new functionality, please include appropriate tests.
 
 ## Documentation
 
-If you've added new features or made significant changes, please update the documentation accordingly.
+If you've added new features or made significant changes, please update the documentation accordingly. Ensure that the README.md file is kept up-to-date, as it is used as the long description for the package on PyPI.
 
 Thank you for contributing to dobyemail!

@@ -129,4 +129,4 @@ Please read CONTRIBUTE.md for details on our code of conduct, and the process fo
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
