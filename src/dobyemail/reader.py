@@ -20,6 +20,12 @@ class Reader:
         if not all([self.imap_server, self.imap_port, self.username, self.password]):
             raise ValueError("Missing required email reader configuration parameters")
 
+    def _get_imap_connection(self):
+        if self.imap_use_ssl:
+            return imaplib.IMAP4_SSL(self.imap_server, self.imap_port)
+        else:
+            return imaplib.IMAP4(self.imap_server, self.imap_port)
+
     def list_emails(self, from_date, to_date):
         """
         List all emails between the specified date range.
@@ -39,7 +45,7 @@ class Reader:
         emails = []
         try:
             # Connect to the IMAP server
-            with imaplib.IMAP4_SSL(self.imap_server, self.imap_port) as imap_server:
+            with self._get_imap_connection() as imap_server:
                 # Login to the server
                 imap_server.login(self.username, self.password)
                 
@@ -120,7 +126,7 @@ class Reader:
                 os.makedirs(download_dir, exist_ok=True)
                 
                 # Connect to the IMAP server
-                with imaplib.IMAP4_SSL(self.imap_server, self.imap_port, timeout=timeout) as imap_server:
+                with self._get_imap_connection() as imap_server:
                     # Login to the server
                     imap_server.login(self.username, self.password)
                     
@@ -193,7 +199,7 @@ class Reader:
         
         try:
             # Connect to the IMAP server
-            with imaplib.IMAP4_SSL(self.imap_server, self.imap_port) as imap_server:
+            with self._get_imap_connection() as imap_server:
                 # Login to the server
                 imap_server.login(self.username, self.password)
                 
@@ -232,7 +238,6 @@ class Reader:
         
         except Exception as e:
             logger.error(f"Error deleting emails: {str(e)}")
-
 
 def create_reader(imap_server, imap_port, imap_use_ssl, username, password):
     """

@@ -1,11 +1,8 @@
 import unittest
-from unittest.mock import patch, MagicMock
-import io
-import logging
+from unittest.mock import patch
 from dobyemail import parse_date, check_ports, is_valid_email, get_email_ports
-from dobyemail.config import Config
 
-class TestEmailUtils(unittest.TestCase):
+class TestUtils(unittest.TestCase):
 
     def test_parse_date(self):
         self.assertEqual(parse_date("2023-05-15"), "15-May-2023")

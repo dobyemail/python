@@ -5,13 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="dobyemail",
-    version="0.1.2",  # Incrementing the version number
+    version="0.1.5",  # Incrementing the version number
     author="Tom Sapletta",
     author_email="info@softreck.dev",
-    description="Do By Email is a comprehensive Python package for handling various email operations. It provides a set of utilities and classes to simplify email-related tasks in your Python projects.",
+    description="Do By Email is a comprehensive Python package for handling various email operations.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/dobyemail/python",
+    url="https://python.dobyemail.com",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
