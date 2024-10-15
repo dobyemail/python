@@ -12,14 +12,14 @@ Thank you for your interest in contributing to dobyemail! This document provides
 
 ## Publishing to PyPI
 
-To publish the dobyemail package to PyPI, follow these steps:
+The dobyemail package has been successfully published to PyPI. To update the package for future releases, follow these steps:
 
 1. Ensure you have the latest version of the necessary tools:
    ```bash
    pip install --upgrade setuptools wheel twine
    ```
 
-2. Update the version number in `setup.py` if you've made any changes.
+2. Update the version number in `setup.py` to reflect the new version.
 
 3. Clean up any old builds:
    ```bash
@@ -36,17 +36,7 @@ To publish the dobyemail package to PyPI, follow these steps:
    twine check dist/*
    ```
 
-6. Upload to TestPyPI first to ensure everything works correctly:
-   ```bash
-   twine upload --repository testpypi dist/*
-   ```
-
-7. Install from TestPyPI to verify the package works:
-   ```bash
-   pip install --index-url https://test.pypi.org/simple/ dobyemail
-   ```
-
-8. If everything looks good, upload to the real PyPI:
+6. Upload to PyPI:
    ```bash
    twine upload dist/*
    ```
@@ -61,7 +51,7 @@ Please follow PEP 8 guidelines for Python code. Use meaningful variable names an
 
 Before submitting a pull request, make sure all tests pass:
 
-```
+```bash
 python -m unittest discover tests
 ```
 
