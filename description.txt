@@ -1,0 +1,15 @@
+DobyEmail: Comprehensive Python Email Handling Package
+
+DobyEmail is a versatile Python package designed to simplify and streamline email-related operations in Python projects. It provides a suite of tools and utilities for managing various aspects of email communication, making it easier for developers to integrate email functionality into their applications.
+
+Key Features:
+1. Email Service: High-level interface for SMTP and IMAP operations
+2. Email Sending: Compose and send emails with attachment support
+3. Email Reading: Connect to IMAP servers, fetch and parse email content
+4. Email Transfer: Move emails between accounts or folders
+5. Date Parsing: Convert various date string formats to a standard format
+6. Port Checking: Verify open ports on specified hosts
+7. Email Validation: Basic email address validation
+8. Email Port Configuration: Retrieve standard email port settings
+
+DobyEmail is designed with simplicity and flexibility in mind, allowing developers to easily incorporate robust email functionality into their Python projects. Whether you're building a small script or a large-scale application, DobyEmail provides the tools you need to handle email operations efficiently and effectively.
